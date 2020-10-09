@@ -1,2 +1,2 @@
 # TWRP_Tree_olivewood_id
-Thanks To SebaUbuntu for tolls
+Thanks To SebaUbuntu for tools
