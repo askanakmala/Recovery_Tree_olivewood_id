@@ -15,5 +15,4 @@
 # limitations under the License.
 #
 
-PRODUCT_MAKEFILES := \
-     $(LOCAL_DIR)/omni_olivewood.mk
+PRODUCT_MAKEFILES := $(LOCAL_DIR)/omni_olivewood.mk
