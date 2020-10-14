@@ -27,6 +27,18 @@ $(call inherit-product, device/xiaomi/olivewood/device.mk)
 $(call inherit-product, vendor/omni/config/common.mk)
 $(call inherit-product, vendor/omni/config/gsm.mk)
 
+#Treble Support
+#$(call inherit-product, $(SRC_TARGET_DIR)/product/treble_common_32.mk)
+
+# Device identifier. This must come after all inclusions.
+
+#PRODUCT_COPY_FILES += \
+#	$(LOCAL_PATH)/prebuilt/kernel:kernel \
+#	$(LOCAL_PATH)/recovery.fstab:recovery.fstab
+
+# Device identifier. This must come after all inclusions.
+
+
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := olivewood
 PRODUCT_NAME := omni_olivewood
@@ -34,3 +46,18 @@ PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := Redmi 8A Pro
 PRODUCT_MANUFACTURER := xiaomi
 PRODUCT_RELEASE_NAME := Redmi Redmi 8A Pro
+
+#Add treble compatibility
+#PRODUCT_FULL_TREBLE_OVERRIDE := true 
+
+#PRODUCT_PROPERTY_OVERRIDES := ro.treble.enabled=true
+
+PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
+    ro.product.device \
+    ro.product.name \
+    ro.build.product
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.build.security_patch=2025-12-31 \
+	ro.secure=1 \
+	ro.adb.secure=0
