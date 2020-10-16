@@ -58,6 +58,6 @@ PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
     ro.build.product
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.build.security_patch=2025-12-31 \
+    ro.vendor.build.security_patch=2026-12-31 \
 	ro.secure=1 \
 	ro.adb.secure=0
