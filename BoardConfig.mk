@@ -63,7 +63,7 @@ BOARD_KERNEL_CMDLINE += lpm_levels.sleep_disabled=1 earlycon=msm_hsl_uart,0x78B0
 #BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 
 # Kernel
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/zImage-dtb
+TARGET_PREBUILT_KERNEL := $(PLATFORM_PATH)/prebuilt/zImage-dtb
 BOARD_BOOTIMG_HEADER_VERSION := 1
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 2048
@@ -106,7 +106,7 @@ BOARD_USES_METADATA_PARTITION := true
 
 
 # Hack: prevent anti rollback
-PLATFORM_SECURITY_PATCH := 2025-12-31
+PLATFORM_SECURITY_PATCH := 2026-12-31
 PLATFORM_VERSION := 16.1.0
 
 # TWRP Configuration
