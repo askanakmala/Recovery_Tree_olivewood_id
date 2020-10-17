@@ -15,4 +15,6 @@ Rear Depth Sensor  | 2 MP, f/2.4, (depth)
 Front Camera | 8 MP, f/2.0, 1/4", 1.12µm
 Release Date | 02 April 2020
 
-![redmi_8a_pro](https://i01.appmifile.com/webfile/globalimg/Mandy/C3K3-800x800-GREY.png "redmi_8a_pro")
+![1](https://i01.appmifile.com/webfile/globalimg/Mandy/C3K3-800x800-BLUE.png "1")
+![2](https://i01.appmifile.com/webfile/globalimg/Mandy/C3K3-800x800-GREY.png "2")
+![3](https://i01.appmifile.com/webfile/globalimg/Mandy/C3K3-800x800-WHITE.png "3")
