@@ -1,4 +1,4 @@
-# TWRP Device configuration for Xiaomi Redmi 8a pro
+# TWRP Device configuration for Xiaomi Redmi 8a pro A10
 Basic   | Spec Sheet
 -------:|:-------------------------
 CPU     | Octa-core (4x1.95 GHz Cortex-A53 & 4x1.45 GHz Cortex A53)

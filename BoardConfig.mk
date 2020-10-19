@@ -27,23 +27,21 @@ TARGET_BOARD_PLATFORM := sdm439
 # Architecture
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
-TARGET_CPU_ABI := armeabi
-TARGET_CPU_VARIANT := cortex-a15
-
-TARGET_BOARD_PLATFORM_GPU := qcom-andreno505
+TARGET_CPU_ABI := armeabi-v7a
+TARGET_CPU_ABI2 := armeabi
+TARGET_CPU_VARIANT := generic
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := olivewood
 
-# Partitions
-BOARD_BOOTIMAGE_PARTITION_SIZE := 0x4000000
+# Partition
+BOARD_BOOTIMAGE_PARTITION_SIZE := 0x2000000
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x4000000
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 0x100000000
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x550647000
 BOARD_CACHEIMAGE_PARTITION_SIZE := 0x18000000
 BOARD_PERSISTIMAGE_PARTITION_SIZE := 0x2000000
 BOARD_FLASH_BLOCK_SIZE := 131072
-
 
 # File systems
 BOARD_HAS_LARGE_FILESYSTEM := true
@@ -54,13 +52,8 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 TARGET_COPY_OUT_VENDOR := vendor
 
-# Cmdline
-BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200,n8
-BOARD_KERNEL_CMDLINE += androidboot.console=ttyMSM0 androidboot.hardware=qcom user_debug=30 msm_rtb.filter=0x237 ehci-hcd.park=3
-BOARD_KERNEL_CMDLINE += androidboot.bootdevice=7824900.sdhci androidboot.usbconfigfs=true androidboot.configfs=true
-BOARD_KERNEL_CMDLINE += lpm_levels.sleep_disabled=1 earlycon=msm_hsl_uart,0x78B0000 vmalloc=300M firmware_class.path=/vendor/firmware_mnt/image loop.max_part=7
-#BOARD_KERNEL_CMDLINE += androi.dboot.selinux=permissive
-#BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+# Cmd line
+BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200,n8 androidboot.console=ttyMSM0 androidboot.hardware=qcom user_debug=30 msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 earlycon=msm_hsl_uart,0x78B0000 vmalloc=300M androidboot.usbconfigfs=true loop.max_part=7 androidboot.selinux=permissive
 
 # Kernel
 TARGET_PREBUILT_KERNEL := $(PLATFORM_PATH)/prebuilt/zImage-dtb
@@ -91,6 +84,10 @@ BOARD_USES_QCOM_HARDWARE := true
 BOARD_AVB_ENABLE := true
 BOARD_AVB_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
 
+# Hack: prevent anti rollback
+PLATFORM_SECURITY_PATCH := 2027-12-31
+PLATFORM_VERSION := 16.1.0
+
 # Filesystem
 #TARGET_USERIMAGES_USE_F2FS := true
 TARGET_USERIMAGES_USE_EXT4 := true
@@ -103,11 +100,6 @@ TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_CRYPTO_FBE := true
 TW_INCLUDE_FBE_METADATA_DECRYPT := true
 BOARD_USES_METADATA_PARTITION := true
-
-
-# Hack: prevent anti rollback
-PLATFORM_SECURITY_PATCH := 2026-12-31
-PLATFORM_VERSION := 16.1.0
 
 # TWRP Configuration
 BOARD_HAS_LARGE_FILESYSTEM := true
