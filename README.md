@@ -5,7 +5,7 @@ CPU     | Octa-core (4x1.95 GHz Cortex-A53 & 4x1.45 GHz Cortex A53)
 CHIPSET | Qualcomm SDM439 Snapdragon 439 (12 nm)
 GPU     | Adreno 505
 Memory  | 2/3 GB
-Shipped Android Version | 9.0
+Shipped Android Version | 9.0 update to 10.0
 Storage | 32 GB
 MicroSD | Up to 512 GB
 Battery | 5000 mAh (non-removable)
