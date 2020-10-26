@@ -126,7 +126,7 @@ TW_DEFAULT_BRIGHTNESS := 489
 TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
 
 # aditonal
-TW_DEVICE_VERSION=$(shell date '+%Y%m%d')
+TW_DEVICE_VERSION=1.0-a10
 
 # System-as-root
 
