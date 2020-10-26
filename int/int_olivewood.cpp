@@ -41,9 +41,9 @@ void load_properties(const char *model) {
     property_set("ro.product.name", model);
     property_set("ro.build.product", model);
     property_set("ro.product.device", model);
-    property_set("ro.build.date", "Fri Jul 20 15:18:00 CST 2018");
-    property_set("ro.build.date.utc", "1592832458");
-    property_set("ro.bootimage.build.date", "1592832458");
+    property_set("ro.build.date", "Fri Jul 20 20:07:15 WIB 2020");
+    property_set("ro.build.date.utc", "1598965635");
+    property_set("ro.bootimage.build.date", "1598965635");
 }
 
 
