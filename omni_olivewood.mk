@@ -52,11 +52,11 @@ PRODUCT_RELEASE_NAME := Redmi Redmi 8A Pro
 #PRODUCT_PROPERTY_OVERRIDES := ro.treble.enabled=true
 
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
-    ro.product.device \
-    ro.product.name \
-    ro.build.product
+	ro.product.device \
+	ro.product.name \
+	ro.build.product
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.build.security_patch=2027-12-31 \
+	ro.vendor.build.security_patch=2027-12-31 \
 	ro.secure=1 \
 	ro.adb.secure=0
