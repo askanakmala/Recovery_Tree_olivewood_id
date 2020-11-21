@@ -54,7 +54,11 @@ TARGET_USERIMAGES_USE_F2FS := true
 TARGET_COPY_OUT_VENDOR := vendor
 
 # Cmd line
-BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200,n8 androidboot.console=ttyMSM0 androidboot.hardware=qcom user_debug=30 msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 earlycon=msm_hsl_uart,0x78B0000 vmalloc=300M androidboot.usbconfigfs=true loop.max_part=7 androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200,n8
+BOARD_KERNEL_CMDLINE += androidboot.console=ttyMSM0 androidboot.hardware=qcom user_debug=30 msm_rtb.filter=0x237 ehci-hcd.park=3
+BOARD_KERNEL_CMDLINE += androidboot.bootdevice=7824900.sdhci androidboot.usbconfigfs=true 
+BOARD_KERNEL_CMDLINE += lpm_levels.sleep_disabled=1 earlycon=msm_hsl_uart,0x78B0000 vmalloc=300M
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 
 # Kernel
 TARGET_PREBUILT_KERNEL := $(PLATFORM_PATH)/prebuilt/zImage-dtb
