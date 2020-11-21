@@ -38,19 +38,19 @@ namespace android {
 namespace init {
 
 void load_properties(const char *model) {
-    property_set("ro.product.name", model);
-    property_set("ro.build.product", model);
-    property_set("ro.product.device", model);
-    property_set("ro.build.date", "Fri Jul 20 20:07:15 WIB 2020");
-    property_set("ro.build.date.utc", "1598965635");
-    property_set("ro.bootimage.build.date", "1598965635");
+	property_set("ro.product.name", model);
+	property_set("ro.build.product", model);
+	property_set("ro.product.device", model);
+	property_set("ro.build.date", "Fri Jul 20 20:07:15 WIB 2020");
+	property_set("ro.build.date.utc", "1598965635");
+	property_set("ro.bootimage.build.date", "1598965635");
 }
 
 
 void vendor_load_properties() {
-    std::string device_region = android::base::GetProperty("ro.boot.product.cert", "");
+	std::string device_region = android::base::GetProperty("ro.boot.product.cert", "");
 
-        load_properties("olivewood");
+		load_properties("olivewood");
 
 }
 
