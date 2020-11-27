@@ -1,4 +1,4 @@
-# PBRP Device configuration for Xiaomi Redmi 8a pro
+# Device configuration for Xiaomi Redmi 8a pro
 
 The Redmi 8a Pro (codenamed _"olivewood"_) is a smartphone from Xiaomi.
 It was released in April 2020.
