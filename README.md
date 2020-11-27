@@ -1,5 +1,49 @@
-# PBRP Device configuration for Xiaomi Redmi 8a pro 
+# PBRP Device configuration for Xiaomi Redmi 8a pro
 
+The Redmi 8a Pro (codenamed _"olivewood"_) is a smartphone from Xiaomi.
+It was released in April 2020.
+
+## Compile
+
+First sync PBRP manifest:
+
+```
+repo init -u git://github.com/PitchBlackRecoveryProject/manifest_pb.git -b twrp-9.0
+```
+Then add these string to .repo/manifests/remove.xml
+
+
+Then add these projects to .repo/local_manifests/roomservice.xml (If you don't have it, you can add them to .repo/manifest.xml): 
+
+```xml
+<project name="askanakmala/android_device_xiaomi_olivewood-twrp" path="device/xiaomi/olivewood" remote="github" revision="PBRP_9.0-Q" />
+```
+
+Now you can sync your source:
+
+```
+repo sync
+```
+
+To auotomatic make the twrp installer, you need to import this commit in the build/make path: https://gerrit.omnirom.org/#/c/android_build/+/33182/
+
+Finally execute these:
+
+```
+. build/envsetup.sh
+export ALLOW_MISSING_DEPENDENCIES=true
+export LC_ALL=C
+lunch omni_olivewood-eng 
+mka recoveryimage 
+```
+
+To test it:
+
+```
+fastboot boot out/target/product/olivewood/recovery.img
+```
+
+## Specification
 ![r8ap](https://github.com/askanakmala/template_me/blob/main/r8ap.jpg "r8ap")
 
 Basic   | Spec Sheet
