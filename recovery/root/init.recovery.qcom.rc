@@ -41,7 +41,6 @@ on init
 
     mkdir /config
     mkdir /system/bin
-    mkdir /system/etc
     symlink /vendor/manifest.xml /system/manifest.xml
     symlink /sbin/busybox /system/bin/sh
     symlink /system/etc /etc
@@ -101,13 +100,6 @@ service hwservicemanager /sbin/hwservicemanager
 service servicemanager /sbin/servicemanager
     user root
     group root readproc
-    disabled
-    seclabel u:r:recovery:s0
-
-service keystore_auth /sbin/keystore_auth
-    oneshot
-    user system
-    group root
     disabled
     seclabel u:r:recovery:s0
 
