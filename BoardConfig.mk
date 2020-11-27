@@ -31,6 +31,14 @@ TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_VARIANT := generic
 
+TARGET_2ND_ARCH := arm
+TARGET_2ND_ARCH_VARIANT := armv8-a
+TARGET_2ND_CPU_ABI := armeabi-v7a
+TARGET_2ND_CPU_ABI2 := armeabi
+TARGET_2ND_CPU_VARIANT := cortex-a53
+
+TARGET_BOARD_PLATFORM_GPU := qcom-adreno505
+
 # Assert
 TARGET_OTA_ASSERT_DEVICE := olivewood
 
@@ -48,20 +56,20 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_SYSTEMIMAGE_PARTITION_TYPE := ext4
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
-BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
+BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_COPY_OUT_VENDOR := vendor
 
 # Cmd line
-BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200,n8
-BOARD_KERNEL_CMDLINE += androidboot.console=ttyMSM0 androidboot.hardware=qcom user_debug=30 msm_rtb.filter=0x237 ehci-hcd.park=3
-BOARD_KERNEL_CMDLINE += androidboot.bootdevice=7824900.sdhci androidboot.usbconfigfs=true 
-BOARD_KERNEL_CMDLINE += lpm_levels.sleep_disabled=1 earlycon=msm_hsl_uart,0x78B0000 vmalloc=300M
+BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200,n8 androidboot.console=ttyMSM0 androidboot.hardware=qcom user_debug=30 msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 earlycon=msm_hsl_uart,0x78B0000 vmalloc=300M androidboot.usbconfigfs=true loop.max_part=7
+BOARD_KERNEL_CMDLINE += androidboot.avb_version=1.0 androidboot.vbmeta.avb_version=1.0
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 
 # Kernel
 TARGET_PREBUILT_KERNEL := $(PLATFORM_PATH)/prebuilt/zImage-dtb
+BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
+BOARD_KERNEL_IMAGE_NAME := zImage-dtb
 BOARD_BOOTIMG_HEADER_VERSION := 1
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 2048
@@ -90,8 +98,9 @@ BOARD_AVB_ENABLE := true
 BOARD_AVB_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
 
 # Hack: prevent anti rollback
-PLATFORM_SECURITY_PATCH := 2027-12-31
+PLATFORM_SECURITY_PATCH := 2099-12-31
 PLATFORM_VERSION := 16.1.0
+PLATFORM_SDK_VERSION := 29
 
 # Crypto
 TW_INCLUDE_CRYPTO := true
@@ -107,7 +116,7 @@ TW_USE_TOOLBOX := true
 HAVE_SELINUX := true
 RECOVERY_SDCARD_ON_DATA := true
 TARGET_RECOVERY_QCOM_RTC_FIX := true
-TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
+TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel0-backlight/brightness"
 TW_NO_LEGACY_PROPS := true
 TW_EXTRA_LANGUAGES := true
 TW_INCLUDE_NTFS_3G := true
@@ -122,9 +131,24 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_MAX_BRIGHTNESS := 2047
 TW_DEFAULT_BRIGHTNESS := 489
 TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
+TW_EXCLUDE_TWRPAPP := true
+TW_NO_EXFAT := false
+TW_NO_EXFAT_FUSE := false
+TW_HAS_EDL_MODE := true
+TARGET_USES_MKE2FS := true
+TW_EXCLUDE_DEFAULT_USB_INIT := true
+TW_NO_SCREEN_BLANK := true
+TWRP_EVENT_LOGGING := true
+TW_NO_SCREEN_TIMEOUT  := true
+TW_HAS_USB_STORAGE := true
+TW_NO_USB_STORAGE := false
 
 # aditonal
-TW_DEVICE_VERSION=$(shell date '+%Y%m%d')
+TW_DEVICE_VERSION= Askan28
+
+# PBRP
+TW_USE_QCOM_HAPTICS_VIBRATOR := true
+TW_USE_LEDS_HAPTICS := true
 
 # System-as-root
 
@@ -133,7 +157,7 @@ TW_DEVICE_VERSION=$(shell date '+%Y%m%d')
 #BOARD_SUPPRESS_SECURE_ERASE := true
 # OTA
 
-TARGET_OTA_ASSERT_DEVICE := olivewood
+#TARGET_OTA_ASSERT_DEVICE := olivewood
 
 # Treble
 #BOARD_NEEDS_VENDORIMAGE_SYMLINK := false
