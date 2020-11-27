@@ -1,4 +1,7 @@
-# TWRP Device configuration for Xiaomi Redmi 8a pro A10
+# PBRP Device configuration for Xiaomi Redmi 8a pro 
+
+![r8ap](https://github.com/askanakmala/template_me/blob/main/r8ap.jpg "r8ap")
+
 Basic   | Spec Sheet
 -------:|:-------------------------
 CPU     | Octa-core (4x1.95 GHz Cortex-A53 & 4x1.45 GHz Cortex A53)
@@ -14,7 +17,3 @@ Rear Camera  | 13 MP, f/2.2, (wide), 1/3.1", 1.12µm, PDAF
 Rear Depth Sensor  | 2 MP, f/2.4, (depth)
 Front Camera | 8 MP, f/2.0, 1/4", 1.12µm
 Release Date | 02 April 2020
-
-![1](https://i01.appmifile.com/webfile/globalimg/Mandy/C3K3-800x800-BLUE.png "1")
-![2](https://i01.appmifile.com/webfile/globalimg/Mandy/C3K3-800x800-GREY.png "2")
-![3](https://i01.appmifile.com/webfile/globalimg/Mandy/C3K3-800x800-WHITE.png "3")
