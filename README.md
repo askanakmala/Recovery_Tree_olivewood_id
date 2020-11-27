@@ -3,6 +3,12 @@
 The Redmi 8a Pro (codenamed _"olivewood"_) is a smartphone from Xiaomi.
 It was released in April 2020.
 
+<p align="center">
+  <a href="#compile">⚙️ Compile</a> •
+  <a href="#test">💡 Test</a> •
+  <a href="#specification">📱 Specification</a> •
+</p>
+
 ## Compile
 
 First sync PBRP manifest:
@@ -36,6 +42,8 @@ export LC_ALL=C
 lunch omni_olivewood-eng 
 mka recoveryimage 
 ```
+
+## Test
 
 To test it:
 
