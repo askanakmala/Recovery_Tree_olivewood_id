@@ -8,16 +8,16 @@ jobs:
       MANIFEST_BRANCH: 'android-9.0'
       # PBRP_BRANCH: 'xy'
       VERSION: '3.0.0'
-      MAINTAINER: '@askanakmala'
+      MAINTAINER: '@Askan28'
       VENDOR: 'xiaomi'
       CODENAME: 'olivewood'
       BUILD_LUNCH: 'omni_olivewood-eng'
       # Remove the following when Publishing Official
       TEST_BUILD: 'true'
       # Only for Official Build, uncomment following
-      PB_OFFICIAL: 'false'
+      # PB_OFFICIAL: 'true'
       CHANGELOG: |
-        - Initial build
+        - Initial build (belum dibuat masih sibuk:v)
     working_directory: /home/builder/pitchblack
     steps:
       - run:
