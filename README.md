@@ -9,6 +9,8 @@ It was released in April 2020.
   <a href="#specification">📱 Specification</a> •
 </p>
 
+![r8ap](https://github.com/askanakmala/template_me/blob/main/r8ap.jpg "r8ap")
+
 ## Compile
 
 First sync PBRP manifest:
@@ -52,7 +54,6 @@ fastboot boot out/target/product/olivewood/recovery.img
 ```
 
 ## Specification
-![r8ap](https://github.com/askanakmala/template_me/blob/main/r8ap.jpg "r8ap")
 
 Basic   | Spec Sheet
 -------:|:-------------------------
