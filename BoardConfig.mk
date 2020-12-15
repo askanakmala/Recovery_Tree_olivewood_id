@@ -78,6 +78,11 @@ TARGET_KERNEL_CONFIG := olivewood_defconfig
 # Ramdisk compression
 LZMA_RAMDISK_TARGETS := recovery
 
+# Init
+TARGET_INIT_VENDOR_LIB := libinit_olivewood
+TARGET_RECOVERY_DEVICE_MODULES := libinit_olivewood
+TARGET_PLATFORM_DEVICE_BASE := /devices/soc/
+
 # Fstab
 TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/recovery.fstab
 
